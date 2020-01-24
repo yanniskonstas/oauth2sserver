@@ -8,3 +8,8 @@ OAuth2 Spring Server
 * Download and install Apache [Maven](https://maven.apache.org/install.html). Maven is a project management and comprehension tool that makes it easy to declare third-party (external) dependencies of your Java project required in the compile/build phase. It has various plugins such as the compiler, which compiles your Java source code and produces the runnable artifact (binary). You can download Maven from the Apache website.  Follow the installation instructions  to install Maven on your operating system. We use Maven version 3.5 to test all the samples.
 * Download and install the [curl](https://curl.haxx.se/download.html) command line tool from the curl website.  You use curl in the book as a client application to access microservices. Most of the operating systems do have curl installed out of the box.
 * Download and install the Git command-line client on your computer. You only use Git client once to clone our samples Git repository. 
+
+## Sample calls
+
+curl -u application1:application1secret -H "Content-Type: application/json" -d '{ "grant_type": "client_credentials", "scope": "read write" }' 'http://localhost:8085/oauth/token'
+
